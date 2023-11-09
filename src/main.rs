@@ -2,7 +2,7 @@ fn main() {
     println!("Hello, world!");
 
     another_function();
-    another_function2(5);
+    another_function2(7);
     print_labeled_measurement(5, 'h');
     //cant do bc statements dont return values
     //let x = (let y = 6);
@@ -24,6 +24,12 @@ fn main() {
 
         println!("The value of x is: {x}");
     }
+
+    {
+        let x = plus_one(5);
+
+        println!("The value of x is: {x}");
+    }
 }
 
 fn another_function() {
@@ -40,4 +46,8 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 
 fn five() -> i32 {
     5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
